@@ -17,7 +17,7 @@ public class Server {
 
                    String message = in.readLine();
                     System.out.println(message);
-                    System.out.println("Подключение установлено с порта: " + clientSocket.getPort());
+                   out.println("Подключение установлено!");
                 }
             }
         } catch (IOException e) {

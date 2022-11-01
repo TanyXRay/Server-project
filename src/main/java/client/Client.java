@@ -12,7 +12,9 @@ public class Client {
              PrintWriter out = new PrintWriter(new OutputStreamWriter(clientSocket.getOutputStream()), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
-            out.println("Подключаюсь к серверу!");
+            out.println("Подключение к серверу с порта " + clientSocket.getLocalPort());
+            String message = in.readLine();
+            System.out.println(message);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
