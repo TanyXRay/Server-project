@@ -15,9 +15,9 @@ public class Server {
                      PrintWriter out = new PrintWriter(new OutputStreamWriter(clientSocket.getOutputStream()), true);
                      BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
-                   String message = in.readLine();
+                    String message = in.readLine();
                     System.out.println(message);
-                   out.println("Подключение установлено!");
+                    out.println("Подключение установлено!");
                 }
             }
         } catch (IOException e) {
